@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gift List</title>
+  <style>
+    .gift {
+      display: inline-block;
+      margin: 15px;
+      text-align: center;
+    }
+    .gift img {
+      width: 150px;
+    }
+    .claimed {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Choose Your Gift 💝</h2>
+
+<div class="gift">
+  <img src="IMAGE_URL_1">
+  <br>
+  <button onclick="claim(this)">Mine</button>
+</div>
+
+<div class="gift">
+  <img src="IMAGE_URL_2">
+  <br>
+  <button onclick="claim(this)">Mine</button>
+</div>
+
+<script>
+function claim(btn) {
+  btn.innerText = "Claimed";
+  btn.disabled = true;
+  btn.parentElement.querySelector("img").classList.add("claimed");
+  window.open("YOUR_GOOGLE_FORM_LINK", "_blank");
+}
+</script>
+
+</body>
+</html>
